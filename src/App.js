@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 import Home from "./client/Home/Home.jsx";
 import Location from "./client/Location/Location.jsx";
-import Registry from "./client/Registry/Registry.jsx";
 import ThingsToDo from "./client/ThingsToDo/ThingsToDo.jsx";
 import Navigation from "./client/Components/Navigation/Navigation.jsx";
 import Sidebar from "./client/Components/Sidebar/Sidebar.jsx";
