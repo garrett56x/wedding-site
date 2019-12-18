@@ -13,7 +13,7 @@ export default function Home() {
       <Hero backgroundImage={BackgroundImage} phrase="OUR STORY" />
       <div className="content">
         <div className="how-we-met">
-          <h2>How We Met</h2>
+          <h2>How We Met Test</h2>
           <img className="section-image" src={howWeMet} />
           <p>
             After barely missing each other for almost a decade, we finally met one day when mutual friends invited us to
