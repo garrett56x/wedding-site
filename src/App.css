@@ -1,0 +1,50 @@
+.App {
+  text-align: center;
+  /*font-family: 'Montserrat', sans-serif;*/
+  font-family: 'Raleway', sans-serif;
+}
+
+.header {
+  min-height: 25px;
+  box-shadow: 0 0 1px #d1d1d1;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: #fff;
+}
+
+.header .header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.header .logo {
+  color: black;
+  font-size: 35px;
+  text-decoration: none;
+  font-family: 'Tangerine', cursive;
+}
+
+.header .hamburger {
+  display: none;
+}
+
+@media only screen and (max-width: 650px) {
+  .header .logo {
+    font-size: 25px;
+  }
+
+  .header .hamburger {
+    display: inline-block;
+  }
+    .header .hamburger div {
+      width: 30px;
+      height: 4px;
+      background-color: black;
+      margin: 3px 0;
+      border-radius: 5px;
+    }
+}

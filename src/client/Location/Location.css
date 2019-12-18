@@ -1,0 +1,46 @@
+.location {
+}
+  .location .content {
+    margin: 20px 0;
+    padding: 0 40px;
+  }
+    .location .content h2 {
+      margin-bottom: 0;
+    }
+    .location .content p {
+      margin-top: 0;
+    }
+
+.gmap_canvas {
+  overflow: hidden;
+  background: none!important;
+  height: 500px;
+  width: 800px;
+  margin: auto;
+}
+
+.gmap_canvas iframe {
+  width: 800px;
+}
+
+@media only screen and (max-width: 900px) {
+  .gmap_canvas, .gmap_canvas iframe {
+    width: 600px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .location .content {
+    padding: 0 20px;
+  }
+
+  .gmap_canvas, .gmap_canvas iframe {
+    width: 400px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .gmap_canvas, .gmap_canvas iframe {
+    width: 300px;
+  }
+}

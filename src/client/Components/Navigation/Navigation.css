@@ -1,0 +1,28 @@
+.navigation {
+  list-style-type: none;
+  margin: 0;
+}
+
+.navigation li {
+  display: inline-block;
+  margin-left: 15px;
+}
+  .navigation li a {
+    color: grey;
+    text-decoration: none;
+  }
+
+  .navigation li a:hover {
+    color: black;
+  }
+
+  .navigation li a.is-active {
+    color: black;
+    text-decoration: underline;
+  }
+
+@media only screen and (max-width: 650px) {
+  .navigation {
+    display: none;
+  }
+}

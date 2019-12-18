@@ -1,0 +1,43 @@
+.home {
+}
+  .home .content {
+    margin: 20px 0;
+    padding: 0 40px;
+    text-align: left;
+  }
+    .home .content h2 {
+      text-align: center;
+    }
+    .home .content .how-we-met {
+    	overflow: auto;
+    	/*width: 100%;*/
+    }
+      .home .content .how-we-met .section-image {
+        width: 50%;
+        float: left;
+        margin-right: 10px;
+      }
+
+    .home .content .proposal {
+    	overflow: auto;
+    	/*width: 100%;*/
+    }
+      .home .content .proposal .section-image {
+        width: 50%;
+        float: right;
+        margin-left: 10px;
+      }
+
+@media only screen and (max-width: 650px) {
+  .home .content {
+    padding: 0 20px;
+  }
+
+  .home .content .how-we-met .section-image {
+    width: 100%;
+  }
+
+  .home .content .proposal .section-image {
+  	width: 100%;
+  }
+}
