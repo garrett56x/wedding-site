@@ -17,7 +17,7 @@ export default function Location() {
 
       	<h2>Location</h2>
       	<p>Hotel Ballard</p>
-      	<p><a href="tel:206-789-5012">(206) 789-5012</a> | <a target="_blank" href="https://www.hotelballardseattle.com/en-us">Hotel Website</a></p>
+      	<p><a href="tel:206-789-5012">(206) 789-5012</a> | <a target="_blank" rel="noopener noreferrer" href="https://www.hotelballardseattle.com/en-us">Hotel Website</a></p>
       	<p>
 			We have reserved a small number of rooms for our guests.
 			Please reference the Van Neste / Wang party when making your reservations for a special discount.

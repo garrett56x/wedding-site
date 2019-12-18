@@ -3,10 +3,6 @@ import { NavLink } from "react-router-dom";
 import "./Navigation.css";  
 
 class Navigation extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <ul className="navigation">
@@ -20,7 +16,7 @@ class Navigation extends React.Component {
           <NavLink to="/things-to-do" activeClassName="is-active" onClick={ () => this.props.toggleSidebar(false) }>Things To Do</NavLink>
         </li>
         <li>
-          <a href="https://www.zola.com/registry/angieandgarrett" target="_blank" onClick={ () => this.props.toggleSidebar(false) }>Registry</a>
+          <a href="https://www.zola.com/registry/angieandgarrett" target="_blank" rel="noopener noreferrer" onClick={ () => this.props.toggleSidebar(false) }>Registry</a>
         </li>
       </ul>
     );

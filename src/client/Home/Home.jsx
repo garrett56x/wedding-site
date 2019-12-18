@@ -14,7 +14,7 @@ export default function Home() {
       <div className="content">
         <div className="how-we-met">
           <h2>How We Met</h2>
-          <img className="section-image" src={howWeMet} />
+          <img className="section-image" alt="btp" src={howWeMet} />
           <p>
             After barely missing each other for almost a decade, we finally met one day when mutual friends invited us to
             watch the Gonzaga game at Belltown Pizza. Unlike our friends, we both arrived on time. We had nobody to talk to,
@@ -25,7 +25,7 @@ export default function Home() {
         </div>
         <div className="proposal">
           <h2>The Proposal</h2>
-          <img className="section-image" src={proposal} />
+          <img className="section-image" alt="proposal" src={proposal} />
           <p>
             One of Angie's life goals is to complete the Asian Trilogy Peak Challenge; Mt. Fuji, Jade Mountain, and Mt.
             Kinabalu. On our most recent trip to Taiwan, Garrett agreed to climb Jade Mountain (12,966') with Angie.

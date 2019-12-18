@@ -2,10 +2,6 @@ import React from "react";
 import "./ItemCard.css";
 
 class ItemCard extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     const { item } = this.props;
     const images = require.context('../../../assets', true);
@@ -18,7 +14,7 @@ class ItemCard extends React.Component {
         <div className="item-info">
           <h3>{item.name}</h3>
           <p className="contact">
-          	<a target="_blank" href={item.website}>Website</a> | <a href={`tel:${item.phone}`}>{item.phone}</a>
+          	<a target="_blank" rel="noopener noreferrer" href={item.website}>Website</a> | <a href={`tel:${item.phone}`}>{item.phone}</a>
           </p>
           <p>{item.location}</p>
           <p><span className="info-title">His Favorite: </span>{item.his}</p>
