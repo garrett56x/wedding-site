@@ -1,4 +1,16 @@
 const pois = {
+  coffee: [
+    {
+      name: "Venture Coffee Co",
+      website: "https://venture-coffee.com/",
+      location: "5819 24th Ave NW, Seattle, WA 98107",
+      phone: "206-397-4552",
+      image: "venture.jpg",
+      his: "Latte",
+      hers: "Iced Latte",
+      recommendation: "Mention you're here for Angie & Garrett's wedding. They love us, so who knows, maybe they'll hook you up.",
+    },
+  ],
   brunch: [
     {
       name: "Brimmer & Heeltap",
@@ -32,6 +44,16 @@ const pois = {
       hers: "Yellowtail, Salmon, FOB Rice",
       recommendation: "They'll give you both regular & spicy crab salad if you ask",
     },
+    {
+      name: "Un Bien",
+      website: "https://www.unbienseattle.com/",
+      location: "6226 Seaview Ave NW, Seattle, WA 98107",
+      phone: "206-420-7545",
+      image: "un_bien.jpg",
+      his: "Caribbean Roast Sandwich",
+      hers: "Caribbean Roast Sandwich",
+      recommendation: "Seriously... that sandwich is insane!",
+    },
   ],
   dinner: [
     {
@@ -43,6 +65,16 @@ const pois = {
       his: "San Antonio Puffy Tacos",
       hers: "Classic Puffy Tacos",
       recommendation: "Totchoes",
+    },
+    {
+      name: "San Fermo",
+      website: "http://www.sanfermoseattle.com/",
+      location: "5341 Ballard Ave NW, Seattle, WA 98107",
+      phone: "206-342-1530",
+      image: "san_fermo.jpg",
+      his: "Mushroom Risotto",
+      hers: "Saffron Bolognese",
+      recommendation: "Ask for a delicious whine pairing",
     },
   ],
   drinks: [
@@ -65,6 +97,28 @@ const pois = {
       his: "Dirty Gin Martini",
       hers: "Death Star",
       recommendation: "Ask the bartender to mix something up for you",
+    },
+  ],
+  dessert: [
+    {
+      name: "Hot Cakes",
+      website: "https://getyourhotcakes.com/",
+      location: "5427 Ballard Ave NW, Seattle, WA 98107",
+      phone: "206-453-3792",
+      image: "hot_cakes.png",
+      his: "Milk Chocolate Hazelnut",
+      hers: "Dark Decadence",
+      recommendation: "Add a scoop of ice cream",
+    },
+    {
+      name: "Salt & Straw",
+      website: "https://saltandstraw.com/",
+      location: "5420 Ballard Ave NW, Seattle, WA 98107",
+      phone: "206-294-5581",
+      image: "salt_straw.jpg",
+      his: "Sea Salt & Caramel",
+      hers: "Honey Lavender",
+      recommendation: "Waffle cones",
     },
   ],
 }

@@ -7,6 +7,7 @@ import ThingsToDo from "./client/ThingsToDo/ThingsToDo.jsx";
 import Party from "./client/Party/Party.jsx";
 import Navigation from "./client/Components/Navigation/Navigation.jsx";
 import Sidebar from "./client/Components/Sidebar/Sidebar.jsx";
+import ScrollToTop from "./client/Components/ScrollToTop/ScrollToTop.jsx";
 
 class App extends React.Component {
   constructor(props) {
@@ -19,6 +20,7 @@ class App extends React.Component {
   render() {
     return (
       <Router>
+        <ScrollToTop />
         <header>
           <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway|Tangerine&display=swap" rel="stylesheet" />
         </header>
@@ -46,10 +48,7 @@ class App extends React.Component {
             <Route path="/things-to-do">
               <ThingsToDo />
             </Route>
-            <Route path="/home">
-              <Home />
-            </Route>
-            <Route path="/">
+            <Route exact path="/">
               <Home />
             </Route>
           </Switch>

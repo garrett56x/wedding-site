@@ -14,6 +14,10 @@ export default function ThingsToDo() {
       	phrase="THINGS TO DO"
       />
       <div className="content">
+        <h2>Coffee</h2>
+        {pois.coffee.map((item) => (
+          <ItemCard item={item} />
+        ))}
         <h2>Brunch</h2>
         {pois.brunch.map((item) => (
           <ItemCard item={item} />
@@ -28,6 +32,10 @@ export default function ThingsToDo() {
         ))}
         <h2>Drinks</h2>
         {pois.drinks.map((item) => (
+          <ItemCard item={item} />
+        ))}
+        <h2>Dessert</h2>
+        {pois.dessert.map((item) => (
           <ItemCard item={item} />
         ))}
       </div>

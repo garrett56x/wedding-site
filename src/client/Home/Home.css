@@ -10,7 +10,6 @@
     }
     .home .content .how-we-met {
     	overflow: auto;
-    	/*width: 100%;*/
     }
       .home .content .how-we-met .section-image {
         width: 50%;
@@ -20,7 +19,6 @@
 
     .home .content .proposal {
     	overflow: auto;
-    	/*width: 100%;*/
     }
       .home .content .proposal .section-image {
         width: 50%;
