@@ -22,12 +22,10 @@ export default function Location() {
 			We have reserved a small number of rooms for our guests.
 			Please reference the Van Neste / Wang party when making your reservations for a special discount.
 		</p>
-		{/* <div class="mapouter"> */}
-			<div class="gmap_canvas">
-				<iframe title="map" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=hotel%20ballard&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
-				</iframe>
-			</div>
-		{/* </div> */}
+		<div class="gmap_canvas">
+			<iframe title="map" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=hotel%20ballard&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+			</iframe>
+		</div>
 	  </div>
     </div>
   );

@@ -4,6 +4,7 @@ import "./App.css";
 import Home from "./client/Home/Home.jsx";
 import Location from "./client/Location/Location.jsx";
 import ThingsToDo from "./client/ThingsToDo/ThingsToDo.jsx";
+import Party from "./client/Party/Party.jsx";
 import Navigation from "./client/Components/Navigation/Navigation.jsx";
 import Sidebar from "./client/Components/Sidebar/Sidebar.jsx";
 
@@ -36,6 +37,9 @@ class App extends React.Component {
           </div>
 
           <Switch>
+            <Route path="/party-with-us">
+              <Party />
+            </Route>
             <Route path="/when-and-where">
               <Location />
             </Route>

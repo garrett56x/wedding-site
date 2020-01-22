@@ -1,0 +1,47 @@
+.party {
+}
+  .party .content {
+    margin: 20px 0;
+    padding: 0 40px;
+  }
+  	.party .content h2 {
+      text-align: center;
+      margin-bottom: 0;
+    }
+    .party .content p {
+      margin-top: 0;
+    }
+
+.gmap_canvas {
+  overflow: hidden;
+  background: none!important;
+  height: 500px;
+  width: 800px;
+  margin: auto;
+}
+
+.gmap_canvas iframe {
+  width: 800px;
+}
+
+@media only screen and (max-width: 900px) {
+  .gmap_canvas, .gmap_canvas iframe {
+    width: 600px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .party .content {
+    padding: 0 20px;
+  }
+
+  .gmap_canvas, .gmap_canvas iframe {
+    width: 400px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .gmap_canvas, .gmap_canvas iframe {
+    width: 300px;
+  }
+}

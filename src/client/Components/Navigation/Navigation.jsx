@@ -18,6 +18,9 @@ class Navigation extends React.Component {
         <li>
           <a href="https://www.zola.com/registry/angieandgarrett" target="_blank" rel="noopener noreferrer" onClick={ () => this.props.toggleSidebar(false) }>Registry</a>
         </li>
+        <li>
+          <NavLink to="/party-with-us" activeClassName="is-active" onClick={ () => this.props.toggleSidebar(false) }>Party With Us</NavLink>
+        </li>
       </ul>
     );
   }
