@@ -15,6 +15,9 @@ export default function Location() {
       	<h2>Date & Time</h2>
       	<p>August 15th, 2020 - 5PM</p>
 
+		<h2>Dress Code</h2>
+      	<p>Black tie optional</p>
+
       	<h2>Location</h2>
       	<p>Hotel Ballard</p>
       	<p><a href="tel:206-789-5012">(206) 789-5012</a> | <a target="_blank" rel="noopener noreferrer" href="https://www.hotelballardseattle.com/en-us">Hotel Website</a></p>
