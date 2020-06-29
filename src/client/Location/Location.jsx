@@ -13,7 +13,7 @@ export default function Location() {
       />
       <div className="content">
       	<h2>Date & Time</h2>
-      	<p>August 15th, 2020 - 5PM</p>
+      	<p>March 20th, 2021 - 5PM</p>
 
 		<h2>Dress Code</h2>
       	<p>Black tie optional</p>

@@ -15,7 +15,7 @@ export default function Party() {
       />
       <div className="content">
         <h2>Watershed Bachelor(ette) Party</h2>
-      	<p>July 31st - August 2nd</p>
+      	<p>TBD</p>
       	<p><a href="https://watershedfest.com/" target="_blank" rel="noopener noreferrer">Get Tickets</a></p>
       	<p>
 			Come join us for a weekend of country music at the Gorge! For details about our camping plans,
@@ -27,7 +27,7 @@ export default function Party() {
       	<p>Belltown Pizza</p>
       	<p><a href="tel:206-441-2653">(206) 441-2653</a></p>
       	<p>
-			We are hosting a rehersal dinner on August 14th at Belltown Pizza, the place where we met!
+			We are hosting a rehersal dinner on March 19th at Belltown Pizza, the place where we met!
             Join us for some pizza, meatballs, and drinks.
 		</p>
 		<div class="gmap_canvas">
