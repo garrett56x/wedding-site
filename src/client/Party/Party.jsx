@@ -27,7 +27,7 @@ export default function Party() {
       	<p>Belltown Pizza</p>
       	<p><a href="tel:206-441-2653">(206) 441-2653</a></p>
       	<p>
-			We are hosting a rehersal dinner on March 19th at Belltown Pizza, the place where we met!
+			We are hosting a rehersal dinner on March 19th at Belltown Pizza, the place where we met, on the date we met!
             Join us for some pizza, meatballs, and drinks.
 		</p>
 		<div class="gmap_canvas">
