@@ -19,7 +19,7 @@ const pois = {
       phone: "206-420-2534",
       image: "brimmer.jpg",
       his: "Scotch Egg",
-      hers: "Traditional Breakfast with sausage",
+      hers: "Traditional breakfast with sausage",
       recommendation: "The Bread",
     },
     {

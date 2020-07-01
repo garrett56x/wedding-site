@@ -9,10 +9,10 @@ export default function Location() {
       <Hero
       	backgroundImage={BackgroundImage}
       	backgroundPosition="top"
-      	phrase="WHEN & WHERE"
+      	phrase="WHEN &amp; WHERE"
       />
       <div className="content">
-      	<h2>Date & Time</h2>
+      	<h2>Date &amp; Time</h2>
       	<p>March 20th, 2021 - 5PM</p>
 
 		<h2>Dress Code</h2>

@@ -3,7 +3,7 @@ import Hero from "../Hero/Hero.jsx";
 import BackgroundImage from "../../assets/coffee_shop.jpg";
 import pois from "../../data/things-to-do.js";
 import "./ThingsToDo.css";
-import ItemCard from "../Components/ItemCard/ItemCard.jsx"
+import ItemCard from "../Components/ItemCard/ItemCard.jsx";
 
 export default function ThingsToDo() {
   return (

@@ -1,14 +1,15 @@
 import React from "react";
 import "./ItemCard.css";
+import { Paper } from "@material-ui/core";
 
 class ItemCard extends React.Component {
   render() {
     const { item } = this.props;
     const images = require.context('../../../assets', true);
-	const img = images('./' + item.image);
+	  const img = images('./' + item.image);
 
     return (
-      <div className="item-card">
+      <Paper className="item-card">
         <div className="item-image" style={{ backgroundImage: `url(${img})` }}>
         </div>
         <div className="item-info">
@@ -21,7 +22,7 @@ class ItemCard extends React.Component {
           <p><span className="info-title">Her Favorite: </span>{item.hers}</p>
           <p><span className="info-title">We Recommend: </span>{item.recommendation}</p>
         </div>
-      </div>
+      </Paper>
     );
   }
 }
