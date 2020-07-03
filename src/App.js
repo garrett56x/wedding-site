@@ -9,6 +9,9 @@ import Navigation from "./client/Components/Navigation/Navigation.jsx";
 import Sidebar from "./client/Components/Sidebar/Sidebar.jsx";
 import ScrollToTop from "./client/Components/ScrollToTop/ScrollToTop.jsx";
 
+import { IconButton } from "@material-ui/core";
+import Menu from "@material-ui/icons/Menu";
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -30,11 +33,9 @@ class App extends React.Component {
             <div className="header-content">
               <a href="/" className="logo">Angie & Garrett</a>
               <Navigation toggleSidebar={this.toggleSidebar} />
-              <div className="hamburger" onClick={ () => this.toggleSidebar(true) }>
-                <div></div>
-                <div></div>
-                <div></div>
-              </div>
+              <IconButton color="inherit" aria-label="menu" className="hamburger" size="small" onClick={ () => this.toggleSidebar(true) }>
+                <Menu />
+              </IconButton>
             </div>
           </div>
 

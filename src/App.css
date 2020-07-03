@@ -40,11 +40,4 @@
   .header .hamburger {
     display: inline-block;
   }
-    .header .hamburger div {
-      width: 30px;
-      height: 4px;
-      background-color: black;
-      margin: 3px 0;
-      border-radius: 5px;
-    }
 }
