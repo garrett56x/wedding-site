@@ -2,7 +2,7 @@
   height: 600px;
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -16,6 +16,16 @@
   font-size: 50px;
 }
 
+.hero .hero-hashtag {
+  color: white;
+  width: 100%;
+  text-shadow: 0 1px 1px #000;
+  font-size: 25px;
+  text-align: right;
+  padding-right: 10px;
+  margin-bottom: 10px;
+}
+
 @media only screen and (max-width: 1100px) {
   .hero {
     height: 400px;
@@ -25,5 +35,9 @@
 @media only screen and (max-width: 650px) {
   .hero .hero-phrase {
     font-size: 40px;
+  }
+
+  .hero .hero-hashtag {
+    font-size: 20px;
   }
 }

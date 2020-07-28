@@ -13,6 +13,7 @@ export default function Hero(props) {
   return (
     <div className="hero" style={styles}>
       {/* <h1 className="hero-phrase">{props.phrase}</h1> */}
+      <h3 className="hero-hashtag">#GarrettLovesALittleWang</h3>
     </div>
   );
 }
