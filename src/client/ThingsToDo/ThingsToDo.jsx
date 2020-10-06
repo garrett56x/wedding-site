@@ -3,7 +3,7 @@ import Hero from "../Hero/Hero.jsx";
 import BackgroundImage from "../../assets/coffee_shop.jpg";
 import pois from "../../data/things-to-do.js";
 import "./ThingsToDo.css";
-import ItemCard from "../Components/ItemCard/ItemCard.jsx";
+import ItemsList from "../Components/ItemsList/ItemsList.jsx";
 
 export default function ThingsToDo() {
   return (
@@ -14,30 +14,12 @@ export default function ThingsToDo() {
       	phrase="THINGS TO DO"
       />
       <div className="content">
-        <h2>Coffee</h2>
-        {pois.coffee.map((item) => (
-          <ItemCard item={item} />
-        ))}
-        <h2>Brunch</h2>
-        {pois.brunch.map((item) => (
-          <ItemCard item={item} />
-        ))}
-        <h2>Lunch</h2>
-        {pois.lunch.map((item) => (
-          <ItemCard item={item} />
-        ))}
-        <h2>Dinner</h2>
-        {pois.dinner.map((item) => (
-          <ItemCard item={item} />
-        ))}
-        <h2>Drinks</h2>
-        {pois.drinks.map((item) => (
-          <ItemCard item={item} />
-        ))}
-        <h2>Dessert</h2>
-        {pois.dessert.map((item) => (
-          <ItemCard item={item} />
-        ))}
+        <ItemsList title="Coffee" items={pois.coffee} />
+        <ItemsList title="Brunch" items={pois.brunch} />
+        <ItemsList title="Lunch" items={pois.lunch} />
+        <ItemsList title="Dinner" items={pois.dinner} />
+        <ItemsList title="Drinks" items={pois.drinks} />
+        <ItemsList title="Dessert" items={pois.dessert} />
       </div>
     </div>
   );
