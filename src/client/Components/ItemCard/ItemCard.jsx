@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Card, CardHeader, CardMedia, CardContent, CardActions, IconButton, Typography } from '@material-ui/core';
 import { Directions, Favorite, Phone, Public } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: 345,
+    width: 345,
+    margin: "10px",
+    position: "relative",
+    paddingBottom: "64px",
+  },
+  favorite: {
+    color: "#ff7f7f",
   },
   media: {
     height: 0,
@@ -13,24 +19,47 @@ const useStyles = makeStyles((theme) => ({
   },
   contentSection: {
     fontWeight: "bold",
+  },
+  actions: {
+    position: "absolute",
+    bottom: 0
   }
 }));
 
-export default function ItemCard({item}) {
+export default function ItemCard({item, title}) {
   const classes = useStyles();
   // @ts-ignore
   const images = require.context('../../../assets', true);
   const img = images('./' + item.image);
-  
+  let favorites = JSON.parse(localStorage.getItem("myFavorites"));
+  const [favorite, setFavorite] = useState(favorites.indexOf(item.slug) >= 0);
+
+  const clickFavorite = () => {
+    if (favorites) {
+      if (favorite) {
+        favorites.splice(favorites.indexOf(item.slug), 1);
+        setFavorite(false);
+      } else {
+        favorites.push(item.slug);
+        setFavorite(true);
+      }
+    } else {
+      favorites = [item.slug];
+    }
+
+    localStorage.setItem("myFavorites", JSON.stringify(favorites));
+  }
+
   return (
     <Card className={classes.root}>
       <CardHeader
         action={
-          <IconButton aria-label="add to favorites">
+          <IconButton className={favorite ? classes.favorite : ""} aria-label="add to favorites" onClick={clickFavorite}>
             <Favorite />
           </IconButton>
         }
         title={item.name}
+        // subheader={title}
       />
       <CardMedia
         className={classes.media}
@@ -48,7 +77,7 @@ export default function ItemCard({item}) {
           <span className={classes.contentSection}>Recommendation:</span> {item.recommendation}
         </Typography>
       </CardContent>
-      <CardActions disableSpacing>
+      <CardActions className={classes.actions} disableSpacing>
         <IconButton aria-label="website" href={item.website} target="_blank">
           <Public />
         </IconButton>

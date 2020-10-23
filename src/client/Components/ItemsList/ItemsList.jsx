@@ -6,7 +6,7 @@ export default function ItemsList({ title, items }) {
         <div>
             <h2 className="title">{title}</h2>
             {items.map((item) => (
-                <ItemCard key={item.phone} item={item} />
+                <ItemCard key={item.slug} title={title} item={item} />
             ))}
         </div>
     )

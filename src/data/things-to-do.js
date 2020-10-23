@@ -2,6 +2,7 @@ const pois = {
   coffee: [
     {
       name: "Venture Coffee Co",
+      slug: "venture-coffee",
       website: "https://venture-coffee.com/",
       location: "5819 24th Ave NW, Seattle, WA 98107",
       phone: "206-397-4552",
@@ -14,6 +15,7 @@ const pois = {
   brunch: [
     {
       name: "Brimmer & Heeltap",
+      slug: "brimmer-heeltap",
       website: "http://www.brimmerandheeltap.com/",
       location: "425 NW Market St, Seattle, WA 98107",
       phone: "206-420-2534",
@@ -24,6 +26,7 @@ const pois = {
     },
     {
       name: "Fat's Chicken and Waffles",
+      slug: "fats-chicken",
       website: "http://fatschickenandwaffles.com/",
       location: "2726 E Cherry St, Seattle, WA 98122",
       phone: "206-602-6863",
@@ -36,6 +39,7 @@ const pois = {
   lunch: [
     {
       name: "FOB Poke Bar",
+      slug: "fob-poke",
       website: "fobpokebar.com",
       location: "220 Blanchard St, Seattle, WA 98121",
       phone: "206-728-9888",
@@ -46,6 +50,7 @@ const pois = {
     },
     {
       name: "Un Bien",
+      slug: "un-bien",
       website: "https://www.unbienseattle.com/",
       location: "6226 Seaview Ave NW, Seattle, WA 98107",
       phone: "206-420-7545",
@@ -58,6 +63,7 @@ const pois = {
   dinner: [
     {
       name: "Hotel Albatross",
+      slug: "hotel-albatross",
       website: "http://www.hotelalbatross.com/",
       location: "2319 NW Market St, Seattle, WA 98107",
       phone: "206-566-6181",
@@ -68,6 +74,7 @@ const pois = {
     },
     {
       name: "San Fermo",
+      slug: "san-fermo",
       website: "http://www.sanfermoseattle.com/",
       location: "5341 Ballard Ave NW, Seattle, WA 98107",
       phone: "206-342-1530",
@@ -80,6 +87,7 @@ const pois = {
   drinks: [
     {
       name: "Percy's & Co. Seattle",
+      slug: "percys-co",
       website: "https://percysseattle.com/",
       location: "5233 Ballard Ave NW, Seattle, WA 98107",
       phone: "206-420-3750",
@@ -90,6 +98,7 @@ const pois = {
     },
     {
       name: "Bathtub Gin & Co.",
+      slug: "bathtub-gin",
       website: "http://bathtubginseattle.com/",
       location: "2205 2nd Ave, Seattle, WA 98121",
       phone: "206-728-6069",
@@ -102,6 +111,7 @@ const pois = {
   dessert: [
     {
       name: "Hot Cakes",
+      slug: "hot-cakes",
       website: "https://getyourhotcakes.com/",
       location: "5427 Ballard Ave NW, Seattle, WA 98107",
       phone: "206-453-3792",
@@ -112,6 +122,7 @@ const pois = {
     },
     {
       name: "Salt & Straw",
+      slug: "salt-straw",
       website: "https://saltandstraw.com/",
       location: "5420 Ballard Ave NW, Seattle, WA 98107",
       phone: "206-294-5581",
