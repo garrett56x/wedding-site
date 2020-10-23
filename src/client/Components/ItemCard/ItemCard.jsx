@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Card, CardHeader, CardMedia, CardContent, CardActions, IconButton, Typography } from '@material-ui/core';
-import FavoriteIcon from '@material-ui/icons/Favorite';
+import { Directions, Favorite, Phone, Public } from '@material-ui/icons';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -18,15 +18,16 @@ const useStyles = makeStyles((theme) => ({
 
 export default function ItemCard({item}) {
   const classes = useStyles();
+  // @ts-ignore
   const images = require.context('../../../assets', true);
-	const img = images('./' + item.image);
-
+  const img = images('./' + item.image);
+  
   return (
     <Card className={classes.root}>
       <CardHeader
         action={
           <IconButton aria-label="add to favorites">
-            <FavoriteIcon />
+            <Favorite />
           </IconButton>
         }
         title={item.name}
@@ -48,9 +49,15 @@ export default function ItemCard({item}) {
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        {/* <IconButton aria-label="add to favorites">
-          <FavoriteIcon />
-        </IconButton> */}
+        <IconButton aria-label="website" href={item.website} target="_blank">
+          <Public />
+        </IconButton>
+        <IconButton aria-label="phone" href={`tel:${item.phone}`}>
+          <Phone />
+        </IconButton>
+        <IconButton aria-label="directions" href={`http://maps.google.com/?q=${item.location}`} target="_blank">
+          <Directions />
+        </IconButton>
       </CardActions>
     </Card>
   );
