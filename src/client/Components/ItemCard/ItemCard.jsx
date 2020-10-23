@@ -31,7 +31,7 @@ export default function ItemCard({item}) {
   // @ts-ignore
   const images = require.context('../../../assets', true);
   const img = images('./' + item.image);
-  let favorites = JSON.parse(localStorage.getItem("myFavorites"));
+  let favorites = JSON.parse(localStorage.getItem("myFavorites")) || [];
   const [favorite, setFavorite] = useState(favorites.indexOf(item.slug) >= 0);
 
   const clickFavorite = () => {

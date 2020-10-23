@@ -43,6 +43,9 @@ const useStyles = makeStyles((theme) => ({
   },
   favoriteButtonOn: {
     color: "#ff7f7f",
+  },
+  errorMessage: {
+    textAlign: "center",
   }
 }));
 
@@ -66,7 +69,7 @@ export default function ThingsToDo() {
 
   const items = pois.filter((poi) => {
     if (filters.indexOf(poi.category) >= 0 || !filters.length || filters.length === buttons.length) {
-      if (displayFavorites && favorites.indexOf(poi.slug) >= 0) {
+      if (displayFavorites && favorites && favorites.indexOf(poi.slug) >= 0) {
         return poi;
       } else if (!displayFavorites) {
         return poi;
@@ -100,6 +103,14 @@ export default function ThingsToDo() {
             <Favorite />
           </IconButton>
         </div>
+        {(!favorites || !favorites.length) && displayFavorites ?
+          (<div className={classes.errorMessage}>
+            <Typography variant="h4">You Haven&apos;t favorited anything yet.</Typography>
+            <Button variant="outlined" onClick={() => setDisplayFavorites(!displayFavorites)} aria-label="hide favorites">
+              Show things to do
+            </Button>
+          </div>)
+          : (null)} 
         <div className={classes.items}>
           {items.map((item) => (
             <ItemCard key={item.slug} item={item} />
