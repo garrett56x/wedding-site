@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { makeStyles } from '@material-ui/core/styles';
-import { Button } from "@material-ui/core";
+import { Button, IconButton } from "@material-ui/core";
+import { Favorite } from '@material-ui/icons';
 import BackgroundImage from "../../assets/coffee_shop.jpg";
 import pois from "../../data/things-to-do.js";
 import Hero from "../Hero/Hero.jsx";
@@ -40,12 +41,17 @@ const useStyles = makeStyles((theme) => ({
     flexFlow: "row wrap",
     justifyContent: "space-around",
   },
+  favoriteButtonOn: {
+    color: "#ff7f7f",
+  }
 }));
 
 export default function ThingsToDo() {
   const classes = useStyles();
   const buttons = ["Coffee", "Brunch", "Lunch", "Dinner", "Drinks", "Dessert"];
   const [filters, setFilters] = useState([]);
+  const [displayFavorites, setDisplayFavorites] = useState(false);
+  const favorites = JSON.parse(localStorage.getItem("myFavorites"));
 
   const clickFilter = (filter) => {
     const idx = filters.indexOf(filter);
@@ -60,7 +66,11 @@ export default function ThingsToDo() {
 
   const items = pois.filter((poi) => {
     if (filters.indexOf(poi.category) >= 0 || !filters.length || filters.length === buttons.length) {
-      return poi;
+      if (displayFavorites && favorites.indexOf(poi.slug) >= 0) {
+        return poi;
+      } else if (!displayFavorites) {
+        return poi;
+      }
     }
   });
 
@@ -78,12 +88,16 @@ export default function ThingsToDo() {
           {buttons.map((filter) => 
           (<Button
               key={filter}
+              aria-label={filter}
               className={filters.indexOf(filter) >= 0 ? classes.filterButtonOn : classes.filterButton}
               onClick={() => clickFilter(filter)}
             >
               {filter}
             </Button>)
           )}
+          <IconButton className={displayFavorites ? classes.favoriteButtonOn : ""} aria-label="show favorites" onClick={() => setDisplayFavorites(!displayFavorites)}>
+            <Favorite />
+          </IconButton>
         </div>
         <div className={classes.items}>
           {items.map((item) => (
