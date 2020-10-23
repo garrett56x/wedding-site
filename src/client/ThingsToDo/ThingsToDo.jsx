@@ -72,6 +72,7 @@ export default function ThingsToDo() {
         return poi;
       }
     }
+    return false;
   });
 
   return (
