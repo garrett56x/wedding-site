@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function ItemCard({item, title}) {
+export default function ItemCard({item}) {
   const classes = useStyles();
   // @ts-ignore
   const images = require.context('../../../assets', true);
@@ -59,7 +59,7 @@ export default function ItemCard({item, title}) {
           </IconButton>
         }
         title={item.name}
-        // subheader={title}
+        subheader={item.category}
       />
       <CardMedia
         className={classes.media}
