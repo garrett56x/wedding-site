@@ -29,8 +29,8 @@ export default function Party() {
 			    We are hosting a rehersal dinner on March 19th at Belltown Pizza, the place where we met, on the date we met!
           Join us for some pizza, meatballs, and drinks.
 		    </p>
-        <div class="gmap_canvas">
-          <iframe title="map" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=belltown%20pizza&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+        <div className="gmap_canvas">
+          <iframe title="map" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=belltown%20pizza&t=&z=13&ie=UTF8&iwloc=&output=embed" frameBorder={0} scrolling="no" marginHeight={0} marginWidth={0}>
           </iframe>
         </div>
         <h2>After Party</h2>

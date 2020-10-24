@@ -1,60 +1,20 @@
 import React, { useState } from "react";
-import { makeStyles } from '@material-ui/core/styles';
 import { Button, IconButton } from "@material-ui/core";
 import { Favorite } from '@material-ui/icons';
 import BackgroundImage from "../../assets/coffee_shop.jpg";
 import pois from "../../data/things-to-do.js";
 import Hero from "../Hero/Hero.jsx";
 import ItemCard from "../Components/ItemCard/ItemCard.jsx";
-import "./ThingsToDo.css";
 import { Typography } from "@material-ui/core";
-
-const useStyles = makeStyles((theme) => ({
-  filters: {
-    textAlign: "left",
-    width: "100%",
-    padding: "0 10px",
-  },
-  filterButton: {
-    color: "#fff",
-    background: "#88AADD",
-    margin: "5px",
-    opacity: 0.4,
-    '&:hover': {
-      background: "#88AADD",
-      opacity: 0.5,
-    }
-  },
-  filterButtonOn: {
-    color: "#fff",
-    background: "#88AADD",
-    margin: "5px",
-    opacity: 1,
-   '&:hover': {
-      background: "#88AADD",
-      opacity: 0.9,
-    }
-  },
-  items: {
-    width: "100%",
-    display: "flex",
-    flexFlow: "row wrap",
-    justifyContent: "space-around",
-  },
-  favoriteButtonOn: {
-    color: "#ff7f7f",
-  },
-  errorMessage: {
-    textAlign: "center",
-  }
-}));
+import useStyles from "./ThingsToDoStyles.js";
 
 export default function ThingsToDo() {
   const classes = useStyles();
   const buttons = ["Coffee", "Brunch", "Lunch", "Dinner", "Drinks", "Dessert"];
   const [filters, setFilters] = useState([]);
   const [displayFavorites, setDisplayFavorites] = useState(false);
-  const favorites = JSON.parse(localStorage.getItem("myFavorites"));
+  const [favorites] = useState(JSON.parse(localStorage.getItem("myFavorites")) || []);
+  console.log(favorites);
 
   const clickFilter = (filter) => {
     const idx = filters.indexOf(filter);
@@ -79,16 +39,15 @@ export default function ThingsToDo() {
   });
 
   return (
-    <div className="things-to-do">
+    <div>
       <Hero
       	backgroundImage={BackgroundImage}
       	backgroundPosition="top"
       	phrase="THINGS TO DO"
       />
 
-      <div className="content">
+      <div className={classes.content}>
         <div className={classes.filters}>
-          <Typography variant="h4">Filters:</Typography>
           {buttons.map((filter) => 
           (<Button
               key={filter}

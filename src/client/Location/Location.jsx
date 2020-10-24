@@ -26,7 +26,7 @@ export default function Location() {
 			Please reference the Van Neste / Wang party when making your reservations for a special discount.
 		</p>
 		<div className="gmap_canvas">
-			<iframe title="map" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=hotel%20ballard&t=&z=15&ie=UTF8&iwloc=&output=embed" frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0">
+			<iframe title="map" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=hotel%20ballard&t=&z=15&ie=UTF8&iwloc=&output=embed" frameBorder={0} scrolling="no" marginHeight={0} marginWidth={0}>
 			</iframe>
 		</div>
 	  </div>
