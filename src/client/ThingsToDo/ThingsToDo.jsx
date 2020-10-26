@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { Button, IconButton } from "@material-ui/core";
+import { Button, IconButton, Typography } from "@material-ui/core";
 import { Favorite } from '@material-ui/icons';
 import BackgroundImage from "../../assets/coffee_shop.jpg";
 import pois from "../../data/things-to-do.js";
@@ -14,6 +14,7 @@ export default function ThingsToDo() {
   const [filters, setFilters] = useState([]);
   const [displayFavorites, setDisplayFavorites] = useState(false);
   const [favorites] = useContext(FavoriteContext);
+  const [favoritesFilter, setFavoritesFilter] = useState(favorites.length > 0);
 
   const clickFilter = (filter) => {
     const idx = filters.indexOf(filter);
@@ -28,7 +29,7 @@ export default function ThingsToDo() {
 
   const items = pois.filter((poi) => {
     if (filters.indexOf(poi.category) >= 0 || !filters.length || filters.length === buttons.length) {
-      if (displayFavorites && favorites && favorites.indexOf(poi.slug) >= 0) {
+      if (displayFavorites && favorites.indexOf(poi.slug) >= 0) {
         return poi;
       } else if (!displayFavorites) {
         return poi;
@@ -36,6 +37,11 @@ export default function ThingsToDo() {
     }
     return false;
   });
+
+  const clickFavoritesFilter = () => {
+    setDisplayFavorites(!displayFavorites);
+    setFavoritesFilter(!favoritesFilter);
+  }
 
   return (
     <div>
@@ -47,7 +53,7 @@ export default function ThingsToDo() {
 
       <div className={classes.content}>
         <div className={classes.filters}>
-          {buttons.map((filter) => 
+          {buttons.map((filter) =>
           (<Button
               key={filter}
               aria-label={filter}
@@ -57,12 +63,18 @@ export default function ThingsToDo() {
               {filter}
             </Button>)
           )}
-          {favorites.length ? (
-            <IconButton className={displayFavorites ? classes.favoriteButtonOn : ""} aria-label="show favorites" onClick={() => setDisplayFavorites(!displayFavorites)}>
+          {favorites.length || favoritesFilter ? (
+            <IconButton className={displayFavorites ? classes.favoriteButtonOn : ""} aria-label="show favorites" onClick={clickFavoritesFilter}>
               <Favorite />
             </IconButton>
           ) : (null)}
         </div>
+        {displayFavorites && !favorites.length ? (
+          <div className={classes.errorMessage}>
+            <Typography variant="h4">You haven&apos;t selected any favorites!</Typography>
+            <Button variant="outlined" onClick={clickFavoritesFilter}>Back to things to do</Button>
+          </div>
+        ) : (null)}
         <div className={classes.items}>
           {items.map((item) => (
             <ItemCard key={item.slug} item={item} />
