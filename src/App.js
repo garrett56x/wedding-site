@@ -10,43 +10,47 @@ import Sidebar from "./client/Components/Sidebar/Sidebar.jsx";
 import ScrollToTop from "./client/Components/ScrollToTop/ScrollToTop.jsx";
 import { IconButton } from "@material-ui/core";
 import Menu from "@material-ui/icons/Menu";
+import FavoriteContext from "./FavoriteContext.js";
 
 export default function App() {
   const [displaySidebar, setDisplaySideBar] = useState(false);
+  const favoriteHook = useState(JSON.parse(localStorage.getItem("myFavorites")) || []);
 
   return (
-    <Router>
-      <ScrollToTop />
-      <header>
-        <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway|Tangerine&display=swap" rel="stylesheet" />
-      </header>
-      <div className="App">
-        { displaySidebar ? <Sidebar toggleSidebar={setDisplaySideBar} /> : "" }
-        <div className="header">
-          <div className="header-content">
-            <a href="/" className="logo">Angie &amp; Garrett</a>
-            <Navigation toggleSidebar={setDisplaySideBar} />
-            <IconButton color="inherit" aria-label="menu" className="hamburger" size="small" onClick={ () => setDisplaySideBar(true) }>
-              <Menu />
-            </IconButton>
+    <FavoriteContext.Provider value={favoriteHook}>
+      <Router>
+        <ScrollToTop />
+        <header>
+          <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway|Tangerine&display=swap" rel="stylesheet" />
+        </header>
+        <div className="App">
+          { displaySidebar ? <Sidebar toggleSidebar={setDisplaySideBar} /> : "" }
+          <div className="header">
+            <div className="header-content">
+              <a href="/" className="logo">Angie &amp; Garrett</a>
+              <Navigation toggleSidebar={setDisplaySideBar} />
+              <IconButton color="inherit" aria-label="menu" className="hamburger" size="small" onClick={ () => setDisplaySideBar(true) }>
+                <Menu />
+              </IconButton>
+            </div>
           </div>
-        </div>
 
-        <Switch>
-          <Route path="/party-with-us">
-            <Party />
-          </Route>
-          <Route path="/when-and-where">
-            <Location />
-          </Route>
-          <Route path="/things-to-do">
-            <ThingsToDo />
-          </Route>
-          <Route exact path="/">
-            <Home />
-          </Route>
-        </Switch>
-      </div>
-    </Router>
+          <Switch>
+            <Route path="/party-with-us">
+              <Party />
+            </Route>
+            <Route path="/when-and-where">
+              <Location />
+            </Route>
+            <Route path="/things-to-do">
+              <ThingsToDo />
+            </Route>
+            <Route exact path="/">
+              <Home />
+            </Route>
+          </Switch>
+        </div>
+      </Router>
+    </FavoriteContext.Provider>
   );
 }

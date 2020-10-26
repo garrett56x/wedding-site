@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Button, IconButton } from "@material-ui/core";
 import { Favorite } from '@material-ui/icons';
 import BackgroundImage from "../../assets/coffee_shop.jpg";
@@ -7,14 +7,14 @@ import Hero from "../Hero/Hero.jsx";
 import ItemCard from "../Components/ItemCard/ItemCard.jsx";
 import { Typography } from "@material-ui/core";
 import useStyles from "./ThingsToDoStyles.js";
+import FavoriteContext from "../../FavoriteContext.js";
 
 export default function ThingsToDo() {
   const classes = useStyles();
   const buttons = ["Coffee", "Brunch", "Lunch", "Dinner", "Drinks", "Dessert"];
   const [filters, setFilters] = useState([]);
   const [displayFavorites, setDisplayFavorites] = useState(false);
-  const [favorites] = useState(JSON.parse(localStorage.getItem("myFavorites")) || []);
-  console.log(favorites);
+  const [favorites] = useContext(FavoriteContext);
 
   const clickFilter = (filter) => {
     const idx = filters.indexOf(filter);
@@ -58,18 +58,12 @@ export default function ThingsToDo() {
               {filter}
             </Button>)
           )}
-          <IconButton className={displayFavorites ? classes.favoriteButtonOn : ""} aria-label="show favorites" onClick={() => setDisplayFavorites(!displayFavorites)}>
-            <Favorite />
-          </IconButton>
+          {favorites.length ? (
+            <IconButton className={displayFavorites ? classes.favoriteButtonOn : ""} aria-label="show favorites" onClick={() => setDisplayFavorites(!displayFavorites)}>
+              <Favorite />
+            </IconButton>
+          ) : (null)}
         </div>
-        {(!favorites || !favorites.length) && displayFavorites ?
-          (<div className={classes.errorMessage}>
-            <Typography variant="h4">You Haven&apos;t favorited anything yet.</Typography>
-            <Button variant="outlined" onClick={() => setDisplayFavorites(!displayFavorites)} aria-label="hide favorites">
-              Show things to do
-            </Button>
-          </div>)
-          : (null)} 
         <div className={classes.items}>
           {items.map((item) => (
             <ItemCard key={item.slug} item={item} />

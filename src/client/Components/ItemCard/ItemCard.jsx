@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Card, CardHeader, CardMedia, CardContent, CardActions, IconButton, Typography } from '@material-ui/core';
 import { Directions, Favorite, Phone, Public } from '@material-ui/icons';
+import FavoriteContext from "../../../FavoriteContext.js";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   root: {
     width: 345,
     margin: "10px",
@@ -31,23 +32,21 @@ export default function ItemCard({item}) {
   // @ts-ignore
   const images = require.context('../../../assets', true);
   const img = images('./' + item.image);
-  let favorites = JSON.parse(localStorage.getItem("myFavorites")) || [];
+  const [favorites, setFavorites] = useContext(FavoriteContext);
   const [favorite, setFavorite] = useState(favorites.indexOf(item.slug) >= 0);
 
   const clickFavorite = () => {
-    if (favorites) {
-      if (favorite) {
-        favorites.splice(favorites.indexOf(item.slug), 1);
-        setFavorite(false);
-      } else {
-        favorites.push(item.slug);
-        setFavorite(true);
-      }
+    let newFavorites = [...favorites];
+    if (favorite) {
+      newFavorites.splice(newFavorites.indexOf(item.slug), 1);
+      setFavorite(false);
     } else {
-      favorites = [item.slug];
+      newFavorites.push(item.slug);
+      setFavorite(true);
     }
 
-    localStorage.setItem("myFavorites", JSON.stringify(favorites));
+    setFavorites(newFavorites);
+    localStorage.setItem("myFavorites", JSON.stringify(newFavorites));
   }
 
   return (
