@@ -5,7 +5,6 @@ import BackgroundImage from "../../assets/coffee_shop.jpg";
 import pois from "../../data/things-to-do.js";
 import Hero from "../Hero/Hero.jsx";
 import ItemCard from "../Components/ItemCard/ItemCard.jsx";
-import { Typography } from "@material-ui/core";
 import useStyles from "./ThingsToDoStyles.js";
 import FavoriteContext from "../../FavoriteContext.js";
 
