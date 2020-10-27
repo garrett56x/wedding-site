@@ -5,6 +5,7 @@ import BackgroundImage from "../../assets/hands.jpg";
 import useStyles from "./HomeStyles.js";
 
 export default function Home() {
+  // @ts-ignore
   const images = require.context('../../assets', true);
   const howWeMet = images('./btp.jpg');
   const proposal = images('./proposal.png');
@@ -18,7 +19,7 @@ export default function Home() {
           <div className={classes.howWeMet}>
             <img className={classes.hwmPhoto} alt="btp" src={howWeMet} />
             <div className={classes.hwmContent}>
-              <Typography variant="h2">How We Met</Typography>
+              <Typography className={classes.title} variant="h2">How We Met</Typography>
               <Typography variant="body1">
                 After barely missing each other for almost a decade, we finally met one day when mutual friends invited us to
                 watch the Gonzaga game at Belltown Pizza. Unlike our friends, we both arrived on time. We had nobody to talk to,
@@ -32,7 +33,7 @@ export default function Home() {
         <div className={classes.sectionWrapper} style={{ backgroundColor: "#D3D3D3" }}>
           <div className={classes.proposal}>
             <div className={classes.proposalContent}>
-              <Typography variant="h2">The Proposal</Typography>
+              <Typography className={classes.title} variant="h2">The Proposal</Typography>
               <Typography variant="body1">
                 One of Angie&apos;s life goals is to complete the Asian Trilogy Peak Challenge; Mt. Fuji, Jade Mountain, and Mt.
                 Kinabalu. On our most recent trip to Taiwan, Garrett agreed to climb Jade Mountain (12,966') with Angie.

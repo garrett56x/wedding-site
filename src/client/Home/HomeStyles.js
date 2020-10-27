@@ -4,6 +4,11 @@ const useStyles = makeStyles((theme) => ({
     sectionWrapper: {
       width: "100%",
     },
+    title: {
+        [theme.breakpoints.down("xs")] : {
+            fontSize: "45px",
+        },
+    },
     howWeMet: {
       display: "flex",
       textAlign: "left",
@@ -68,4 +73,3 @@ const useStyles = makeStyles((theme) => ({
   }));
 
   export default useStyles;
-  
