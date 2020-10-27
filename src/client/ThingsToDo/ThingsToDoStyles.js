@@ -18,23 +18,11 @@ const useStyles = makeStyles((theme) => ({
     },
     filterButton: {
       color: "#fff",
-      background: "#88AADD",
       margin: "5px",
       opacity: 0.4,
-      '&:hover': {
-        background: "#88AADD",
-        opacity: 0.5,
-      }
     },
     filterButtonOn: {
-      color: "#fff",
-      background: "#88AADD",
-      margin: "5px",
       opacity: 1,
-     '&:hover': {
-        background: "#88AADD",
-        opacity: 0.9,
-      }
     },
     items: {
       width: "100%",

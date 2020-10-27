@@ -57,7 +57,9 @@ export default function ThingsToDo() {
           (<Button
               key={filter}
               aria-label={filter}
-              className={filters.indexOf(filter) >= 0 ? classes.filterButtonOn : classes.filterButton}
+              color="primary"
+              variant="contained"
+              className={filters.indexOf(filter) >= 0 ? [classes.filterButton, classes.filterButtonOn] : classes.filterButton}
               onClick={() => clickFilter(filter)}
             >
               {filter}
