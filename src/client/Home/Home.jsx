@@ -30,7 +30,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className={classes.sectionWrapper} style={{ backgroundColor: "#D3D3D3" }}>
+        <div className={classes.sectionWrapper} style={{ backgroundColor: "#EFEFEF" }}>
           <div className={classes.proposal}>
             <div className={classes.proposalContent}>
               <Typography className={classes.title} variant="h2">The Proposal</Typography>
