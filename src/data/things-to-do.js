@@ -81,7 +81,7 @@ const pois = [
     image: "san_fermo.jpg",
     his: "Mushroom Risotto",
     hers: "Saffron Bolognese",
-    recommendation: "Ask for a delicious whine pairing",
+    recommendation: "Ask for a delicious wine pairing",
   },
   {
     name: "Percy's & Co. Seattle",
