@@ -33,7 +33,7 @@ const pois = [
     image: "fats.jpg",
     his: "Honey Butter Chicken Biscuit Sandwich",
     hers: "Fat’s Eggs Benedict",
-    recommendation: "Best Bloody Mary in Seattle",
+    recommendation: "They make the best bloody mary in Seattle",
   },
   {
     name: "FOB Poke Bar",
@@ -137,6 +137,8 @@ export default pois;
 
 // {
 //   name: "",
+//   slug: "",
+//   category: "",
 //   website: "",
 //   location: "",
 //   phone: "",
