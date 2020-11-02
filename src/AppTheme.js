@@ -7,9 +7,7 @@ const appTheme = createMuiTheme({
     },
   },
   typography: {
-    fontFamily: [
-        "'Raleway'", "sans-serif"
-    ].join(','),
+    fontFamily: ["'Raleway'", "sans-serif"].join(","),
   },
 });
 

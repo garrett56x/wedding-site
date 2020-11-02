@@ -9,7 +9,8 @@ const pois = [
     image: "venture.jpg",
     his: "Latte",
     hers: "Iced Latte",
-    recommendation: "Mention you're here for Angie & Garrett's wedding. They love us, so who knows, maybe they'll hook you up.",
+    recommendation:
+      "Mention you're here for Angie & Garrett's wedding. They love us, so who knows, maybe they'll hook you up.",
   },
   {
     name: "Brimmer & Heeltap",
@@ -45,7 +46,8 @@ const pois = [
     image: "fob.jpg",
     his: "Salmon, Seaweed Salad, Crab Salad",
     hers: "Yellowtail, Salmon, FOB Rice",
-    recommendation: "They'll give you both regular & spicy crab salad if you ask",
+    recommendation:
+      "They'll give you both regular & spicy crab salad if you ask",
   },
   {
     name: "Un Bien",

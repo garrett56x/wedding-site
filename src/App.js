@@ -16,7 +16,9 @@ import appTheme from "./AppTheme.js";
 
 export default function App() {
   const [displaySidebar, setDisplaySideBar] = useState(false);
-  const favoriteHook = useState(JSON.parse(localStorage.getItem("myFavorites")) || []);
+  const favoriteHook = useState(
+    JSON.parse(localStorage.getItem("myFavorites")) || []
+  );
 
   return (
     <FavoriteContext.Provider value={favoriteHook}>
@@ -24,15 +26,30 @@ export default function App() {
         <Router>
           <ScrollToTop />
           <header>
-            <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway|Tangerine&display=swap" rel="stylesheet" />
+            <link
+              href="https://fonts.googleapis.com/css?family=Montserrat|Raleway|Tangerine&display=swap"
+              rel="stylesheet"
+            />
           </header>
           <div className="App">
-            { displaySidebar ? <Sidebar toggleSidebar={setDisplaySideBar} /> : "" }
+            {displaySidebar ? (
+              <Sidebar toggleSidebar={setDisplaySideBar} />
+            ) : (
+              ""
+            )}
             <div className="header">
               <div className="header-content">
-                <a href="/" className="logo">Angie &amp; Garrett</a>
+                <a href="/" className="logo">
+                  Angie &amp; Garrett
+                </a>
                 <Navigation toggleSidebar={setDisplaySideBar} />
-                <IconButton color="inherit" aria-label="menu" className="hamburger" size="small" onClick={ () => setDisplaySideBar(true) }>
+                <IconButton
+                  color="inherit"
+                  aria-label="menu"
+                  className="hamburger"
+                  size="small"
+                  onClick={() => setDisplaySideBar(true)}
+                >
                   <Menu />
                 </IconButton>
               </div>
