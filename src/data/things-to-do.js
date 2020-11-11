@@ -133,6 +133,18 @@ const pois = [
     hers: "Honey Lavender",
     recommendation: "Waffle cones",
   },
+  {
+    name: "Pho An",
+    slug: "pho-an",
+    category: "Lunch",
+    website: "https://phoanlakecity.hrpos.heartland.us/",
+    location: "12526 Lake City Way NE, Seattle, WA 98125",
+    phone: "206-362-3439",
+    image: "pho_an.jpg",
+    his: "Brisket & Meatball Pho",
+    hers: "Oxtail Pho with Meatballs",
+    recommendation: "Fried Eggrolls",
+  },
 ];
 
 export default pois;
