@@ -9,6 +9,16 @@
   position: relative;
 }
 
+.hero .announcement {
+  color: white;
+  background-color: #88aadd;
+  position: fixed;
+  top: 60px;
+  width: 100%;
+  padding: 10px;
+  display: flex;
+}
+
 .hero .hero-phrase {
   color: white;
   width: 100%;
