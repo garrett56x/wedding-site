@@ -33,7 +33,7 @@ export default function Location() {
         <p>
           We have reserved a small number of rooms for our guests. Please
           reference the Van Neste / Wang party when making your reservations for
-          a special discount.
+          a special discount no later than September 2nd.
         </p>
         <div className="gmap_canvas">
           <iframe
