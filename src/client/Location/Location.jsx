@@ -20,6 +20,14 @@ export default function Location() {
 
         <h2>Location</h2>
         <p>Hotel Ballard</p>
+
+        <h2>Parking</h2>
+        <p>
+          The hotel has a parking garage that is a pay as you enter on a first
+          come, first serve basis. Also recommended is the Swedish Hospital
+          parking garage a couple blocks away.
+        </p>
+
         <p>
           <a href="tel:206-789-5012">(206) 789-5012</a> |{" "}
           <a
